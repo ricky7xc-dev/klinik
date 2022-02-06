@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function ProjectBox({ img, title, text, action}) {
+export default function ProjectBox({ img, title, text, action }) {
   return (
     <Wrapper>
-      <ImgBtn className="aniamte pointer" onClick={action ? () => action() : null}>
+      <ImgBtn
+        className="aniamte pointer"
+        onClick={action ? () => action() : null}
+      >
         <img className="radius8" src={img} alt="project"></img>
       </ImgBtn>
       <h3 className="font20 extraBold">{title}</h3>
@@ -16,6 +19,7 @@ export default function ProjectBox({ img, title, text, action}) {
 const Wrapper = styled.div`
   width: 100%;
   margin-top: 30px;
+  margin: 20px;
   img {
     width: 100%;
     height: auto;

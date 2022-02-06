@@ -1,106 +1,209 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 // Components
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
+import ProjectBox from "../Elements/ProjectBox";
 // Assets
 import AddImage1 from "../../assets/img/add/1.png";
 import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
+import ProjectImg1 from "../../assets/img/projects/1.png";
+import ProjectImg2 from "../../assets/img/projects/2.png";
+import ProjectImg3 from "../../assets/img/projects/3.png";
 
 export default function Services() {
   return (
-    <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
-          <ClientSlider />
+    // <Wrapper id="services">
+    //   <div className="whiteBg" style={{ padding: "60px 0" }}>
+    //     <div className="container">
+    //       <HeaderInfo>
+    //         <h1 className="font40 extraBold">Our Awesome Services</h1>
+    //         <p className="font13">
+    //           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    //           nonumy eirmod tempor invidunt ut
+    //           <br />
+    //           labore et dolore magna aliquyam erat, sed diam voluptua.
+    //         </p>
+    //       </HeaderInfo>
+    //       <ServiceBoxRow className="flex">
+    //         <ServiceBoxWrapper>
+    //           <ServiceBox
+    //             icon="roller"
+    //             title="Graphic Design"
+    //             subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    //           />
+    //         </ServiceBoxWrapper>
+    //         <ServiceBoxWrapper>
+    //           <ServiceBox
+    //             icon="monitor"
+    //             title="Web Design"
+    //             subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+    //           />
+    //         </ServiceBoxWrapper>
+    //         <ServiceBoxWrapper>
+    //           <ServiceBox
+    //             icon="browser"
+    //             title="Development"
+    //             subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+    //           />
+    //         </ServiceBoxWrapper>
+    //         <ServiceBoxWrapper>
+    //           <ServiceBox
+    //             icon="printer"
+    //             title="Print"
+    //             subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+    //           />
+    //         </ServiceBoxWrapper>
+    //       </ServiceBoxRow>
+    //     </div>
+    //     <div className="lightBg">
+    //       <div className="container">
+    //         <Advertising className="flexSpaceCenter">
+    //           <AddLeft>
+    //             <h4 className="font15 semiBold">A few words about company</h4>
+    //             <h2 className="font40 extraBold">A Study of Creativity</h2>
+    //             <p className="font12">
+    //               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+    //               diam nonumy eirmod tempor invidunt ut labore et dolore magna
+    //               aliquyam erat, sed diam voluptua. At vero eos et accusam et
+    //               justo duo dolores et ea rebum.
+    //             </p>
+    //             <ButtonsRow
+    //               className="flexNullCenter"
+    //               style={{ margin: "30px 0" }}
+    //             >
+    //               <div style={{ width: "190px" }}>
+    //                 <FullButton
+    //                   title="Get Started"
+    //                   action={() => alert("clicked")}
+    //                 />
+    //               </div>
+    //               <div style={{ width: "190px", marginLeft: "15px" }}>
+    //                 <FullButton
+    //                   title="Contact Us"
+    //                   action={() => alert("clicked")}
+    //                   border
+    //                 />
+    //               </div>
+    //             </ButtonsRow>
+    //           </AddLeft>
+    //           <AddRight>
+    //             <AddRightInner>
+    //               <div className="flexNullCenter">
+    //                 <AddImgWrapp1 className="flexCenter">
+    //                   <img src={AddImage1} alt="office" />
+    //                 </AddImgWrapp1>
+    //                 <AddImgWrapp2>
+    //                   <img src={AddImage2} alt="office" />
+    //                 </AddImgWrapp2>
+    //               </div>
+    //               <div className="flexNullCenter">
+    //                 <AddImgWrapp3>
+    //                   <img src={AddImage3} alt="office" />
+    //                 </AddImgWrapp3>
+    //                 <AddImgWrapp4>
+    //                   <img src={AddImage4} alt="office" />
+    //                 </AddImgWrapp4>
+    //               </div>
+    //             </AddRightInner>
+    //           </AddRight>
+    //         </Advertising>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </Wrapper>
+    <TopCategory id="services">
+      <TrendingTop>
+        <SaintText>Popular collections</SaintText>
+        <Hadua className="textServices">top categories</Hadua>
+        <Pe className="textServices">
+          Nourish your skin with toxin-free cosmetic products. With the offers
+          that you can’t refuse.
+        </Pe>
+      </TrendingTop>
+      <div className="row textCenter mRight">
+        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <ProjectBox
+            img="/assets/img/potoig1.jfif"
+            // title="Awesome Project"
+            text="Tidak hanya menjaga kesehatan tubuh, kita juga perlu untuk menjaga kesehatan kulit yaitu salah satunya dengan cara luluran. Adapun manfaatnya sangat baik untuk kesehatan kulit."
+            action={() => alert("clicked")}
+          />
+        </div>
+        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <ProjectBox
+            img="/assets/img/potoig2.jfif"
+            // title="Awesome Project"
+            text="Traditional massage merupakan salah satu treatment yang dapat meredakan pegal dan nyeri otot akibat aktivitas yang padat. Solusi yang cocok untuk merileksasikan tubuh untuk tetap bugar. Pastinya memiliki manfaat banyak untuk kesehatan tubuh. "
+            action={() => alert("clicked")}
+          />
+        </div>
+        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <ProjectBox
+            img="/assets/img/potoig3.jfif"
+            // title="Awesome Project"
+            text="RSHB menyediakan treatment totok aura yang manfaatnya luar biasa banyak bagi kesehatan tubuh yah. Treatment yang cocok untuk yang kurang tidur, sakit kepala dan lain sebagainya guna merileksasikan. Tidak perlu khawatir untuk harga sangat ekonomis pastinya."
+            action={() => alert("clicked")}
+          />
         </div>
       </div>
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
-        <div className="container">
-          <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
-          </HeaderInfo>
-          <ServiceBoxRow className="flex">
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="roller"
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
-            </ServiceBoxWrapper>
-          </ServiceBoxRow>
-        </div>
-        <div className="lightBg">
-          <div className="container">
-            <Advertising className="flexSpaceCenter">
-              <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
-                <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div>
-                </ButtonsRow>
-              </AddLeft>
-              <AddRight>
-                <AddRightInner>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
-                  </div>
-                </AddRightInner>
-              </AddRight>
-            </Advertising>
-          </div>
-        </div>
-      </div>
-    </Wrapper>
+    </TopCategory>
   );
 }
+
+const TopCategory = styled.section`
+  padding-top: 184px;
+  overflow: hidden;
+`;
+
+const TrendingTop = styled.section`
+  margin-bottom: 20px;
+`;
+
+const SaintText = styled.section`
+  font-size: 60px;
+  padding-left: 9px;
+  font-family: "Mrs Saint Delafield";
+  color: #d05278;
+  display: block;
+  font-size: 50px;
+  text-transform: capitalize;
+  max-width: 456px;
+  text-align: center;
+  margin: 0 auto;
+  // margin-bottom: 56px;
+  padding-left: 10px;
+`;
+
+const Hadua = styled.section`
+  font-size: 54px;
+  line-height: 54px;
+  color: #222222;
+  font-family: "Tenor Sans";
+  text-transform: capitalize;
+  font-weight: 400;
+`;
+
+const Pe = styled.section`
+  margin-top: 30px;
+`;
+
+const TPItems = styled.section`
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+`;
+
+const TPItem = styled.section`
+  width: calc(33.3% - 30px);
+  margin: 0 15px;
+  position: relative;
+  height: 700px;
+`;
 
 const Wrapper = styled.section`
   width: 100%;
