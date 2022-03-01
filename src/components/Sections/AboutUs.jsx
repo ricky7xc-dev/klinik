@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
@@ -15,45 +16,41 @@ import AddImage2 from "../../assets/img/add/img1.jpeg";
 export default function AboutUs() {
   return (
     <Wrapper id="aboutus">
-      <div className="lightBg">
-        <div className="container">
-          <Advertising className="flexSpaceCenter">
-            <AddLeft>
-              <AddLeftInner>
-                <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
-                </ImgWrapper>
-              </AddLeftInner>
-            </AddLeft>
-            <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
-              <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum.
+      <div className="info-blocks">
+        <div
+          className="info-blocks__item info-blocks__item-reverse js-img"
+          style={{ backgroundImage: `url('/assets/img/info-item-bg2.jpg')` }}
+        >
+          <div className="wrapper">
+            <div
+              className="info-blocks__item-img"
+              style={{
+                backgroundImage: `url('/assets/img/main-bg.jpg')`,
+              }}
+            ></div>
+            <div className="info-blocks__item-text">
+              <span className="saint-text">About Us</span>
+              <h2>Who we are</h2>
+              <span className="info-blocks__item-descr">
+                Nourish your skin with toxin-free cosmetic products. With the
+                offers that you can’t refuse.
+              </span>
+              <p>
+                Non aliqua reprehenderit reprehenderit culpa laboris nulla minim
+                anim velit adipisicing ea aliqua alluptate sit do do.Non aliqua
+                reprehenderit reprehenderit culpa laboris nulla minim anim velit
+                adipisicing ea aliqua alluptate sit do do.Non aliqua
+                reprehenderit reprehenderit culpa laboris nulla minim.
               </p>
-              <ButtonsRow
-                className="flexNullCenter"
-                style={{ margin: "30px 0" }}
-              >
-                <div style={{ width: "190px" }}>
-                  <FullButton
-                    title="Get Started"
-                    action={() => alert("clicked")}
-                  />
-                </div>
-                <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton
-                    title="Contact Us"
-                    action={() => alert("clicked")}
-                    border
-                  />
-                </div>
-              </ButtonsRow>
-            </AddRight>
-          </Advertising>
+              <Link href="/about">
+                <a className="info-blocks__item-link">
+                  <i className="icon-video"></i>
+                  Watch video about us
+                  <i className="icon-arrow-lg"></i>
+                </a>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -62,7 +59,43 @@ export default function AboutUs() {
 
 const Wrapper = styled.section`
   width: 100%;
+  padding-top: 30px;
 `;
+
+const ItemContent = styled.section`
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-repeat: no-repeat;
+  flex-direction: row-reverse;
+  background-position: left bottom;
+  background-color: #fcedea;
+`;
+
+const WrapperItemContent = styled.section`
+  position: initial;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: flex-end;
+`;
+
+const IniSection1 = styled.section`
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-color: #faf9ff;
+  width: 50%;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+`;
+
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;

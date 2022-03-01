@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 // Screens
 import Landing from "./screens/Landing.jsx";
 
+import "./style/style.scss"
+
 export default function App() {
   return (
     <>
